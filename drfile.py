@@ -1,22 +1,22 @@
 import discord
 from discord.ext import commands
 
-TOKEN = 'Njc1NzA4MDQ0OTE4OTE1MDk0.XkAqsw.Rhc6w9g-1qpsyV5DbBHALOivwII'
+TOKEN = 'your token'
 
 client = commands.Bot(command_prefix = ['!'])
 
 
 @client.event
 async def on_ready():
-    print('klar')
+    print('bot ready')
 
 @client.event
 async def on_member_join(member):
-    print(f'{member} har tilsluttet')
+    print(f'{member} connected to da server')
 
 @client.event
 async def on_member_remove(member):
-    print(f'{member} har foladt os :(') 
+    print(f'{member} ran away:(') 
 
 @client.command()
 async def where(ctx):
